@@ -1,12 +1,239 @@
-/* TODO: consider creating <Button> and <GradientText> components */
-a,
-.btn {
-  @apply transition-colors duration-200;
-  @apply hover:text-secondary;
-  @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-transparent focus:ring-secondary;
+@font-face {
+  font-family: 'neuemontrealregular';
+  src: url('../assets/fonts/neuemontreal-regular-webfont.woff2') format('woff2'),
+       url('../assets/fonts/neuemontreal-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-.gradient-text {
-  @apply text-transparent bg-clip-text;
-  @apply bg-gradient-to-br from-indigo-500 via-fuchsia-500 to-pink-500;
+@font-face{
+  font-family: 'neuemontrealmedium';
+  src: url('../assets/fonts/neuemontreal-medium-webfont.woff2') format('woff2'),
+      url('../assets/fonts/neuemontreal-medium-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'almarena-display-light';
+  src: url('../assets/fonts/almarena_display_light-webfont.woff2') format('woff2'),
+       url('../assets/fonts/almarena_display_light-webfont.woff') format('woff');
+  font-weight: light;
+  font-style: normal;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: 1vw;
+  font-family: 'neuemontrealregular', sans-serif;
+  font-weight: 400;
+  letter-spacing: -.03vw;
+  -webkit-font-smoothing: antialiased;
+}
+
+a,
+.btn {
+  cursor: pointer;
+}
+
+.btn {
+  @apply relative;
+  @apply flex items-center justify-center;
+  @apply border border-solid rounded-full;
+  @apply px-[2.5em] pb-[.7em] pt-[.8em] xs:pb-[.8em] 
+}
+
+.btnText {
+  font-family: 'almarena-display-light', sans-serif;
+  @apply text-[.875em];
+  @apply leading-none;
+  @apply uppercase;
+}
+
+.btnWrapper {
+  @apply flex flex-col justify-start items-center;
+  @apply h-[.875em];
+  @apply overflow-hidden;
+}
+
+.contain {
+  @apply flex flex-col justify-between;
+  @apply mx-auto;
+  @apply w-screen;
+}
+
+.hero {
+  @apply min-h-screen;
+  @apply flex;
+  @apply bg-[#3864c5];
+  @apply text-[#f4f4f4];
+  @apply py-[1.5em] md:pt-[3em] md:pb-[2em];
+}
+
+.heroBtm {
+  grid-template-rows: auto !important;
+  @apply items-end;
+}
+
+.heroGrid {
+  @apply w-full;
+  @apply grid;
+  @apply gap-x-0;
+  @apply gap-y-5 xs:gap-y-[3vw] md:gap-y-0;
+  @apply grid-flow-row;
+  @apply auto-cols-[1fr];
+  @apply items-center;
+  @apply justify-items-start;
+  @apply justify-between;
+  @apply text-[12px] lg:text-[1vw];
+
+  /* grid templates by breakpoint */
+  grid-template-rows: auto auto auto;
+  @apply md:grid-rows-[auto];
+
+  grid-template-columns: 60% max-content;
+  @apply md:grid-cols-[30%_26%_minmax(max-content,27%)_minmax(14%,max-content)];
+  @apply lg:grid-cols-[33%_26%_minmax(max-content,27%)_minmax(14%,max-content)];
+}
+
+.heroHeading {
+  font-family: 'almarena-display-light', sans-serif;
+  @apply text-[8vw] xs:text-[3em];
+  @apply font-light;
+  @apply leading-[.95];
+  @apply mt-0 mb-[1rem];
+  @apply max-w-[40vmax] md:max-w-[36vw] lg:max-w-[8em];
+}
+
+.heroLocation {
+  @apply text-[1em];
+  @apply leading-[1.15];
+  
+  /* grid spans by breakpoint */
+  @apply col-start-1 col-end-1;
+  @apply row-start-1 row-end-1;
+  @apply md:col-start-3 md:col-end-4;
+  @apply md:row-start-1 md:row-end-2;
+}
+
+.heroP {
+  @apply leading-[1.2];
+  @apply max-w-[20em];
+  @apply mt-0 mb-[5rem] md:mb-[2.5rem];
+  @apply text-[3.5vw] xs:text-[1.15em];
+}
+
+.heroText {
+  grid-template-rows: auto !important;
+  @apply mt-[auto] md:mt-0;
+}
+
+.heroTextWrapper {
+  @apply flex flex-col items-start;
+
+  /* grid span by breakpoints */
+  @apply col-start-1 col-end-1;
+  @apply row-start-1 row-end-1;
+  @apply md:col-start-3 md:col-end-5;
+  @apply md:row-end-2;
+  @apply lg:col-end-4;
+}
+
+.heroSocials {
+  @apply hidden md:grid;
+  grid-template-rows: auto;
+  grid-template-columns: max-content max-content max-content;
+  @apply auto-cols-fr;
+  @apply gap-x-[2rem];
+  @apply gap-y-[16px];
+  @apply uppercase;
+}
+
+.heroVer {
+  @apply col-start-4 col-end-5;
+  @apply text-[1em];
+  @apply justify-self-end
+}
+
+.isTop {
+  @apply mb-[1.125em];
+}
+
+.isNav {
+  @apply px-[2.5em];
+}
+
+.navItem1 {
+  @apply col-start-1 col-end-1 row-start-1 row-end-1;
+}
+
+.navItem2 {
+  @apply justify-self-start;
+  @apply col-start-[span_1] col-end-[span_1];
+  @apply row-start-[span_1] row-end-[span_1];
+}
+
+.navItem3 {
+  @apply justify-self-start;
+  /* grid span by breakpoints */
+  @apply col-start-2 col-end-3;
+  @apply row-start-2 row-end-3;
+  @apply md:col-start-[span_1] md:col-end-[span_1];
+  @apply md:row-start-[span_1] md:row-end-[span_1];
+}
+
+.navItem4 {
+  @apply justify-self-end;
+  /* grid span by breakpoints */
+  @apply col-start-2 col-end-3;
+  @apply row-start-3 row-end-4;
+  @apply md:col-start-[span_1] md:col-end-[span_1];
+  @apply md:row-start-[span_1] md:row-end-[span_1];
+}
+
+.logo {
+  font-family: 'almarena-display-light', sans-serif;
+  @apply text-[1.33em];
+}
+
+.lessPadding {
+  @apply px-[4vw] xs:px-[3vw];
+}
+
+.morePadding {
+  @apply px-[5vw];
+}
+
+.smallCaps {
+  @apply text-[9px] xs:text-[12px] lg:text-[.85em];
+  @apply leading-[1.2];
+  @apply uppercase;
+}
+
+p {
+  @apply block;
+  @apply text-[12px];
+  @apply leading-[1.3];
+  @apply mb-0;
+  margin-block-start: 1rem;
+  maring-block-end: 1rem;
+  inline-block-start: 0px;
+  inline-block-end: 0px;
+}
+
+section {
+  @apply relative;
+  @apply w-full xs:w-auto;
+  @apply min-w-[100vw] xs:min-w-0;
+  @apply z-[2];
+}
+
+.ani {
+  opacity: 1;
+  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+  transform-style: preserve-3d;
 }
