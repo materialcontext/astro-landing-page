@@ -159,6 +159,10 @@ a,
   @apply justify-self-end
 }
 
+.isCV {
+  @apply hidden sm:block
+}
+
 .isTop {
   @apply mb-[1.125em];
 }
