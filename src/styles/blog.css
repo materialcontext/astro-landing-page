@@ -1,0 +1,35 @@
+.blog {
+    @apply bg-[#fcfcfc];
+    @apply text-[#1d1d1d];
+}
+
+.date {
+    @apply text-[16px] 2xl:text-[1.2em];
+    font-family: 'neuemontreallight', sans-serif;
+    word-spacing: .5em;
+}
+
+.postSect {
+    @apply flex;
+    @apply justify-center;
+    @apply mt-[5em] md:mt-[3em];
+    @apply md:mx-auto;
+    @apply w-full;
+}
+
+h1, h2, h3 {
+    font-family: 'almarena-display-regular', sans-serif;
+}
+
+h3 {
+    @apply text-[#3864c5];
+    @apply text-[4.4em] !important;
+    @apply mt-[10px] mb-[3rem] !important;
+    @apply leading-none !important;
+}
+
+
+p.excerpt {
+    @apply text-[2.4em] lg:text-[2.6em];
+    @apply leading-[1.1];
+}

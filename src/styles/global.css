@@ -1,4 +1,12 @@
 @font-face {
+  font-family: 'neuemontreallight';
+  src: url('../assets/fonts/neuemontreal-light-webfont.woff2') format('woff2'),
+       url('../assets/fonts/neuemontreal-light-webfont.woff') format('woff');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'neuemontrealregular';
   src: url('../assets/fonts/neuemontreal-regular-webfont.woff2') format('woff2'),
        url('../assets/fonts/neuemontreal-regular-webfont.woff') format('woff');
@@ -10,7 +18,7 @@
   font-family: 'neuemontrealmedium';
   src: url('../assets/fonts/neuemontreal-medium-webfont.woff2') format('woff2'),
       url('../assets/fonts/neuemontreal-medium-webfont.woff') format('woff');
-  font-weight: normal;
+  font-weight: medium;
   font-style: normal;
 }
 
@@ -18,6 +26,14 @@
   font-family: 'almarena-display-light';
   src: url('../assets/fonts/almarena_display_light-webfont.woff2') format('woff2'),
        url('../assets/fonts/almarena_display_light-webfont.woff') format('woff');
+  font-weight: light;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'almarena-display-regular';
+  src: url('../assets/fonts/almarena_display_regular-webfont.woff2') format('woff2'),
+       url('../assets/fonts/almarena_display_regular-webfont.woff') format('woff');
   font-weight: light;
   font-style: normal;
 }
@@ -61,17 +77,9 @@ a,
 }
 
 .contain {
-  @apply flex flex-col justify-between;
+  @apply flex flex-col;
   @apply mx-auto;
   @apply w-screen;
-}
-
-.hero {
-  @apply min-h-screen;
-  @apply flex;
-  @apply bg-[#3864c5];
-  @apply text-[#f4f4f4];
-  @apply py-[1.5em] md:pt-[3em] md:pb-[2em];
 }
 
 .heroBtm {
@@ -89,8 +97,7 @@ a,
   @apply items-center;
   @apply justify-items-start;
   @apply justify-between;
-  @apply text-[12px] lg:text-[1vw];
-
+  
   /* grid templates by breakpoint */
   grid-template-rows: auto auto auto;
   @apply md:grid-rows-[auto];
@@ -121,6 +128,7 @@ a,
 }
 
 .heroP {
+  @apply block;
   @apply leading-[1.2];
   @apply max-w-[20em];
   @apply mt-0 mb-[5rem] md:mb-[2.5rem];
@@ -160,7 +168,8 @@ a,
 }
 
 .isCV {
-  @apply hidden sm:block
+  @apply hidden sm:block;
+  @apply sm:mb-[3em] md:mb-[1.125em];
 }
 
 .isTop {
@@ -208,8 +217,12 @@ a,
   @apply px-[4vw] xs:px-[3vw];
 }
 
+.min12Font {
+  @apply text-[12px] xl:text-[1vw];
+}
+
 .morePadding {
-  @apply px-[5vw];
+  @apply px-[5vw] xs:px-[6.25vw] sm:px-[7.5vw] lg:px-[11.25vw] 2xl:px-[15vw];
 }
 
 .smallCaps {
@@ -219,25 +232,21 @@ a,
 }
 
 p {
-  @apply block;
-  @apply text-[12px];
-  @apply leading-[1.3];
-  @apply mb-0;
-  margin-block-start: 1rem;
-  maring-block-end: 1rem;
-  inline-block-start: 0px;
-  inline-block-end: 0px;
+  @apply text-[18px] 2xl:text-[1.5em];
+  letter-spacing: normal;
 }
 
-section {
+.hero {
   @apply relative;
+  @apply flex;
+  
   @apply w-full xs:w-auto;
   @apply min-w-[100vw] xs:min-w-0;
-  @apply z-[2];
-}
+  @apply min-h-screen;
 
-.ani {
-  opacity: 1;
-  transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-  transform-style: preserve-3d;
+  @apply bg-[#3864c5];
+  @apply text-[#f4f4f4];
+
+  @apply py-[1.5em] md:pt-[3em] md:pb-[2em];
+  @apply z-[2];
 }
