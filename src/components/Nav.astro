@@ -1,0 +1,15 @@
+---
+const email= 'materialconditionsblog@gmail.com';
+const links = [{name: 'About', url: '/'}, {name: 'Blog', url: '/'}, {name: 'Contact', url: 'mailto:' + email}];
+---
+
+<nav class="flex justify-between items-center border-b-[1px] pb-4">
+    <a class="almarena text-[1.15em]" href="/">Richard Horton</a>
+    <ul class="flex flex-row smallCaps">
+        { links.map(link => (
+            <li class="ml-[3vw]">
+                <a href={link.url}>{link.name}</a>
+            </li>
+        )) }
+    </ul>
+</nav>

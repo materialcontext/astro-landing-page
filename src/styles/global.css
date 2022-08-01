@@ -200,6 +200,10 @@ a,
   @apply md:row-start-[span_1] md:row-end-[span_1];
 }
 
+.almarena {
+  font-family: 'almarena-display-light', sans-serif;
+}
+
 .logo {
   font-family: 'almarena-display-light', sans-serif;
   @apply text-[1.33em];
