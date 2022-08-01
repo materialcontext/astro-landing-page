@@ -160,7 +160,7 @@ a,
 }
 
 .isCV {
-  @apply hidden sm:block;
+  @apply hidden md:block;
   @apply sm:mb-[3em] md:mb-[1.125em];
 }
 
@@ -192,7 +192,7 @@ a,
 }
 
 .navItem4 {
-  @apply justify-self-end;
+  @apply justify-self-start md:justify-self-end;
   /* grid span by breakpoints */
   @apply col-start-2 col-end-3;
   @apply row-start-3 row-end-4;
@@ -243,6 +243,6 @@ p {
   @apply bg-[#3864c5];
   @apply text-[#f4f4f4];
 
-  @apply py-[1.5em] md:pt-[3em] md:pb-[2em];
+  @apply py-[1.5rem] md:pt-[3em] md:pb-[2em];
   @apply z-[2];
 }
