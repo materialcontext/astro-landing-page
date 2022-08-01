@@ -1,5 +1,5 @@
 ---
-layout: ../components/BlogPost.astro
+layout: ../../components/BlogPost.astro
 title: Hello World
 description: This is the first markdown blogpost for the site.
 date: 01 AUG 2022

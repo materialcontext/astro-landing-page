@@ -30,14 +30,6 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'almarena-display-regular';
-  src: url('../assets/fonts/almarena_display_regular-webfont.woff2') format('woff2'),
-       url('../assets/fonts/almarena_display_regular-webfont.woff') format('woff');
-  font-weight: light;
-  font-style: normal;
-}
-
 html {
   -webkit-text-size-adjust: 100%;
 }
