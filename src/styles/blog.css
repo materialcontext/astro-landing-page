@@ -34,3 +34,21 @@ p.excerpt {
     @apply text-[2.4em] lg:text-[2.6em];
     @apply leading-[1.1];
 }
+
+.search {
+    @apply bg-[#fcfcfc] !important;
+    @apply align-middle;
+    }
+
+.searchField {
+    @apply border-[1px];
+    @apply rounded-md;
+    @apply border-[#cccccc];
+    @apply px-1 py-[2px];
+    @apply bg-[#fcfcfc] !important;
+    @apply mr-1
+}
+
+.searchButton {
+    @apply px-1
+}
