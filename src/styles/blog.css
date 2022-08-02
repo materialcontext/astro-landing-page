@@ -13,7 +13,7 @@
 .postSect {
     @apply flex;
     @apply justify-center;
-    @apply mt-[5em] md:mt-[3em];
+    @apply mt-[3em] md:mt-[2em];
     @apply md:mx-auto;
     @apply w-full;
 }
@@ -24,8 +24,8 @@ h1, h2, h3 {
 
 h3 {
     @apply text-[#3864c5];
-    @apply text-[4.4em] !important;
-    @apply mt-[10px] mb-[3rem] !important;
+    @apply text-[3.3em] !important;
+    @apply mt-[1rem] mb-[1.5rem] !important;
     @apply leading-none !important;
 }
 
