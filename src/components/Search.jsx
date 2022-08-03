@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Index } from "lunr";
+import lunr from "lunr";
+const {Index} = lunr;
 
 import docs from "../data/search-results.json";
 import index from "../data/search-index.json";
