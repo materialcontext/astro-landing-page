@@ -20,7 +20,7 @@ const ResultCards = (props) => {
                 return (
                   <a
                     key={index}
-                    href={`/search?q=${tag}`}
+                    href={`/search/?q=${tag}`}
                     className="neueHaas rounded-md text-[#3864c5] border-[1px] border-[#3864c5] px-1 mr-3 hover:bg-[#3864c5] hover:text-[#f4f4f4]"
                   >
                     {tag}
