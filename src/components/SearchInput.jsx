@@ -10,7 +10,7 @@ export default function SearchInput() {
   }, []);
 
   return (
-    <form className="neueHaas" action="/search" method="get">
+    <form className="neueHaas" action="/search/" method="get">
       <input
         className="searchField"
         type="text"
