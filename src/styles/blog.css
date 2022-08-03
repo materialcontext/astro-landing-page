@@ -25,22 +25,22 @@ h1, h2, h3 {
 h1 {
     font-family: 'almarena-display-regular', sans-serif;
     @apply text-[#3864c5];
-    @apply text-[3em] md:text-[3.3em];
-    @apply mt-[1rem] mb-[1rem];
+    @apply text-[3em] md:text-[3.3em] !important;
+    @apply mt-[1rem] mb-[1rem] !important;
 }
 
 h2 {
     font-family: 'neue-haas-roman', sans-serif;
-    @apply text-[2.5em];
-    @apply mb-[.5rem];
+    @apply text-[2.5em] !important;
+    @apply mb-[.5rem] !important;
 }
 
 
 h3 {
     font-family: 'neue-haas-roman', sans-serif;
     @apply text-[#3864c5];
-    @apply text-[1.75em];
-    @apply mb-[.5rem];
+    @apply text-[1.75em] !important;
+    @apply mb-[.5rem] !important;
 }
 
 
