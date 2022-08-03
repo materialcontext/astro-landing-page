@@ -1,3 +1,4 @@
+// imports
 const
     fs = require('fs'),
     matter = require('gray-matter'),
@@ -8,32 +9,34 @@ const
 const docs = fs.readdirSync('./src/pages/posts').map(file => {
     const {data, content} = matter(fs.readFileSync(`./src/pages/posts/${file}`, 'utf8'));
     const doc = {
-        "slug": file.replace('.md', ''),
+        "id": data.id,
         "title": data.title,
+        "tags": data.tags,
         "content": strip(content).replace(/(\r\n|\n|\r)/gm, " ")
     }
     return doc;
 });
 
-// create the index
+// create the search index
 const idx = lunr(function() {
-    this.ref('slug');
-    this.field('title');
+    this.ref('id');
+    this.field('title', {boost: 10});
+    this.field('tags', {boost: 5});
     this.field('content');
     docs.forEach(doc => this.add(doc));
 });
 
-// write the index to a file
-fs.writeFileSync('./src/data/search-index.json', JSON.stringify(idx));
+fs.writeFileSync('./src/data/search-index.json', JSON.stringify(idx));      // write the index to a file
 
-// create the results document
+
+// create a document to source the results from
 const results = {};
 docs.forEach(doc => {
-    results[doc.slug] = {
+    results[doc.id] = {
+        tags: doc.tags.split(', '),
         title: doc.title,
-        content: doc.content
+        content: doc.content.substring(0, 250) + '...'
     }
 });
 
-// write the results document to a file
-fs.writeFileSync('./src/data/search-results.json', JSON.stringify(results));
+fs.writeFileSync('./src/data/search-results.json', JSON.stringify(results));        // write the results document to a file

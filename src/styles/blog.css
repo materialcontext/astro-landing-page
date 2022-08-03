@@ -12,8 +12,11 @@
 
 .postSect {
     @apply flex;
-    @apply justify-center;
-    @apply my-[5em] md:my-[3em];
+    @apply flex-col;
+    @apply grow;
+    @apply justify-start;
+    @apply items-center;
+    @apply my-[3em] md:my-[2.33em];
     @apply md:mx-auto;
     @apply w-full;
 }

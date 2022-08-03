@@ -41,7 +41,7 @@ a,
 .contain {
   @apply flex flex-col;
   @apply mx-auto;
-  @apply w-screen;
+  @apply w-full;
 }
 
 .heroBtm {
@@ -193,7 +193,7 @@ a,
 }
 
 .morePadding {
-  @apply px-[5vw] xs:px-[6.25vw] sm:px-[7.5vw] lg:px-[11.25vw] 2xl:px-[15vw];
+  @apply px-[4vw] xs:px-[5.75vw] sm:px-[7.5vw] lg:px-[11.75vw] 2xl:px-[16vw];
 }
 
 .smallCaps {

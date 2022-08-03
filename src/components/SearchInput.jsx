@@ -10,7 +10,7 @@ export default function SearchInput() {
   }, []);
 
   return (
-    <form class="neueHaas" action="/search" method="get">
+    <form className="neueHaas" action="/search" method="get">
       <input
         className="searchField"
         type="text"
@@ -22,7 +22,7 @@ export default function SearchInput() {
         }}
         onBlur="Search..."
       />
-      <button class="searchButton" type="submit">
+      <button className="searchButton" type="submit">
         Search
       </button>
     </form>

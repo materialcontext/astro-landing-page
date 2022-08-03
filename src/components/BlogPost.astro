@@ -3,6 +3,7 @@ import fs from 'fs';
 const pages = fs.readdirSync('./src/pages/posts').length;
 
 import Nav from './Nav.astro';
+import Footer from './Footer.astro';
 import BlogNav from './BlogNav.jsx';
 
 
@@ -21,14 +22,15 @@ const { content } = Astro.props;
   <title>{content.title}</title>
   <meta name="description" content={content.description}>
 </head>
-<body class="blog morePadding">
+<body class="blog flex flex-col morePadding min-h-screen">
     <Nav />
     <section class="postSect">
         <div class="contain">
             <p class="date">{content.date}</p>
             <slot />
         </div>
+        <BlogNav current={content.id} pages={pages} client:load/>
     </section>
-    <BlogNav pages={pages} client:load/>
+    <Footer />
 </body>
 </html>
