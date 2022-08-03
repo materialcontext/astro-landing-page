@@ -20,7 +20,9 @@ export default function SearchInput() {
         onChange={(e) => {
           setValue(e.target.value);
         }}
-        onBlur="Search..."
+        onBlur={(e) => {
+          setValue("Search...");
+        }}
       />
       <button className="searchButton" type="submit">
         Search
