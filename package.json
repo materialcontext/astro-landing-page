@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "lunr": "^2.3.9",
-    "micromodal": "^0.4.10"
+    "micromodal": "^0.4.10",
+    "remove-markdown": "^0.5.0"
   }
 }

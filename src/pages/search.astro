@@ -1,5 +1,31 @@
 ---
-import Search from '../components/Search';
+import Nav from "~/components/Nav.astro";
+import Search from "~/components/Search";
+import SearchInput from "~/components/SearchInput";
+
+import "~/styles/global.css";
+import "~/styles/blog.css";
 ---
 
-<Search client:load/>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richard Horton</title>
+    <meta
+      name="description"
+      content="Richard Horton--an educator and developer based in Seoul."
+    />
+  </head>
+  <body class="blog morePadding">
+    <Nav />
+    <section class="search-results">
+        <div class="mb-[1rem]">
+            <SearchInput client:load/>
+        </div>
+        <Search client:load />
+    </section>
+  </body>
+</html>

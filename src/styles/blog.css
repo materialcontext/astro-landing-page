@@ -1,5 +1,5 @@
 .blog {
-    @apply py-[1.5em];
+    @apply py-[1em];
     @apply bg-[#fcfcfc];
     @apply text-[#1d1d1d] text-[12px] md:text-[1em];
 }
@@ -13,20 +13,34 @@
 .postSect {
     @apply flex;
     @apply justify-center;
-    @apply mt-[3em] md:mt-[2em];
+    @apply my-[5em] md:my-[3em];
     @apply md:mx-auto;
     @apply w-full;
 }
 
 h1, h2, h3 {
-    font-family: 'almarena-display-regular', sans-serif;
+    @apply leading-none !important;
 }
 
-h3 {
+h1 {
+    font-family: 'almarena-display-regular', sans-serif;
     @apply text-[#3864c5];
-    @apply text-[3.3em] !important;
-    @apply mt-[1rem] mb-[1.5rem] !important;
-    @apply leading-none !important;
+    @apply text-[3em] md:text-[3.3em];
+    @apply mt-[1rem] mb-[1rem];
+}
+
+h2 {
+    font-family: 'neue-haas-roman', sans-serif;
+    @apply text-[2.5em];
+    @apply mb-[.5rem];
+}
+
+
+h3 {
+    font-family: 'neue-haas-roman', sans-serif;
+    @apply text-[#3864c5];
+    @apply text-[1.75em];
+    @apply mb-[.5rem];
 }
 
 
@@ -40,15 +54,29 @@ p.excerpt {
     @apply align-middle;
     }
 
+.search-results {
+    @apply mt-[3em];
+}
+
 .searchField {
     @apply border-[1px];
     @apply rounded-md;
     @apply border-[#cccccc];
     @apply px-1 py-[2px];
-    @apply bg-[#fcfcfc] !important;
+    @apply bg-[#fcfcfc];
     @apply mr-1
 }
 
 .searchButton {
     @apply px-1
+}
+
+.result-card {
+    @apply flex;
+    @apply flex-col;
+    @apply py-3;
+    @apply mb-2;
+    @apply border-b-[1px];
+    @apply border-[#cccccc];
+    @apply bg-[#fcfcfc];
 }

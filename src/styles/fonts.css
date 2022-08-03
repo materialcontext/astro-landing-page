@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'almarena-display-light';
+    src: url('../assets/fonts/almarena_display_light-webfont.woff2') format('woff2'),
+         url('../assets/fonts/almarena_display_light-webfont.woff') format('woff');
+    font-weight: light;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'almarena-display-regular';
+    src: url('../assets/fonts/almarena_display_regular-webfont.woff2') format('woff2'),
+            url('../assets/fonts/almarena_display_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neue-haas-light';
+    src: url('../assets/fonts/NeueHaasDisplayLight.woff2') format('woff2'),
+            url('../assets/fonts/NeueHaasDisplayLight.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'neue-haas-medium';
+  src: url('../assets/fonts/NeueHaasDisplayMedium.woff2') format('woff2'),
+          url('../assets/fonts/NeueHaasDisplayMedium.woff') format('woff');
+
+}
+
+@font-face {
+  font-family: 'neue-haasRoman';
+  src: url('../assets/fonts/NeueHaasDisplayRoman.woff2') format('woff2'),
+          url('../assets/fonts/NeueHaasDisplayRoman.woff') format('woff');
+
+}
+
+@font-face {
+    font-family: 'neuemontreallight';
+    src: url('../assets/fonts/neuemontreal-light-webfont.woff2') format('woff2'),
+         url('../assets/fonts/neuemontreal-light-webfont.woff') format('woff');
+    font-weight: light;
+    font-style: normal;
+  }
+  
+@font-face {
+    font-family: 'neuemontrealregular';
+    src: url('../assets/fonts/neuemontreal-regular-webfont.woff2') format('woff2'),
+            url('../assets/fonts/neuemontreal-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

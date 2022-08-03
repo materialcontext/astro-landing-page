@@ -1,34 +1,4 @@
-@font-face {
-  font-family: 'neuemontreallight';
-  src: url('../assets/fonts/neuemontreal-light-webfont.woff2') format('woff2'),
-       url('../assets/fonts/neuemontreal-light-webfont.woff') format('woff');
-  font-weight: light;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'neuemontrealregular';
-  src: url('../assets/fonts/neuemontreal-regular-webfont.woff2') format('woff2'),
-       url('../assets/fonts/neuemontreal-regular-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face{
-  font-family: 'neuemontrealmedium';
-  src: url('../assets/fonts/neuemontreal-medium-webfont.woff2') format('woff2'),
-      url('../assets/fonts/neuemontreal-medium-webfont.woff') format('woff');
-  font-weight: medium;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'almarena-display-light';
-  src: url('../assets/fonts/almarena_display_light-webfont.woff2') format('woff2'),
-       url('../assets/fonts/almarena_display_light-webfont.woff') format('woff');
-  font-weight: light;
-  font-style: normal;
-}
+@import 'fonts.css';
 
 html {
   -webkit-text-size-adjust: 100%;
@@ -204,6 +174,11 @@ a,
   font-family: 'almarena-display-light', sans-serif;
 }
 
+.neueHaas {
+  font-family: 'neue-haas-light', sans-serif;
+  @apply text-[1em];
+}
+
 .logo {
   font-family: 'almarena-display-light', sans-serif;
   @apply text-[1.33em];
@@ -228,8 +203,9 @@ a,
 }
 
 p {
-  @apply text-[18px] 2xl:text-[1.5em];
+  font-family: 'neue-haas-light', sans-serif;
   letter-spacing: normal;
+  @apply text-[16px] 2xl:text-[1.3em];
 }
 
 .hero {

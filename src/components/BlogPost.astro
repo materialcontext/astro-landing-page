@@ -1,5 +1,11 @@
 ---
+import fs from 'fs';
+const pages = fs.readdirSync('./src/pages/posts').length;
+
 import Nav from './Nav.astro';
+import BlogNav from './BlogNav.jsx';
+
+
 import "~/styles/global.css";
 import "~/styles/blog.css";
 
@@ -23,5 +29,6 @@ const { content } = Astro.props;
             <slot />
         </div>
     </section>
+    <BlogNav pages={pages} client:load/>
 </body>
 </html>
