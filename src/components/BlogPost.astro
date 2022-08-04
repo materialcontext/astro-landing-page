@@ -5,12 +5,14 @@ const pages = fs.readdirSync('./src/pages/posts').length;
 import Nav from './Nav.astro';
 import Footer from './Footer.astro';
 import BlogNav from './BlogNav.jsx';
+import Tags from './Tags.astro';
 
 
 import "~/styles/global.css";
 import "~/styles/blog.css";
 
 const { content } = Astro.props;
+const tags = content.tags.split(', ');
 ---
 
 <!DOCTYPE html>
@@ -28,6 +30,7 @@ const { content } = Astro.props;
         <div class="contain">
             <p class="date">{content.date}</p>
             <slot />
+            <Tags tags={tags} />
         </div>
         <BlogNav current={content.id} pages={pages} client:load/>
     </section>

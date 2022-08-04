@@ -1,0 +1,32 @@
+---
+import Nav from '~/components/Nav.astro';
+import PreviewCards from '~/components/PreviewCards.astro';
+
+import docs from '~/data/search-results.json';
+
+import "~/styles/global.css";
+import "~/styles/blog.css";
+
+const pages = [];
+for (const doc in docs) {
+    docs[doc].slug = doc;
+    pages.push(docs[doc]);
+}
+pages.reverse();
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Richard Horton</title>
+  <meta name="description" content="Richard Horton--an educator and developer based in Seoul.">
+</head>
+<body class="blog morePadding">
+  <Nav />
+  <div class="mt-[1.5em] md:mt-[1em]"></div>
+  <PreviewCards pages={pages}/>
+</body>
+</html>

@@ -1,0 +1,19 @@
+---
+import Tags from './Tags.astro';
+
+const { pages } = Astro.props || [];
+---
+
+<div>
+    {pages.map(page => {
+        return (
+        <div class="result-card">
+            <h3>
+            <a class="hover:underline" href={"/posts/" + page.slug}>{page.title}</a>
+            </h3>
+            <p>{page.content}</p>
+            <Tags tags={page.tags} />
+        </div>
+        );
+    })}
+</div>

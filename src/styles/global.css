@@ -222,3 +222,11 @@ p {
   @apply py-[1.5rem] md:pt-[3em] md:pb-[2em];
   @apply z-[2];
 }
+
+.tag {
+  font-family: 'neue-haas-light', sans-serif;
+  @apply border-[#3864c5] border-[1px] rounded-md;
+  @apply text-[#3864c5];
+  @apply hover:bg-[#3864c5] hover:text-[#f4f4f4];
+  @apply px-1 mr-3;
+}
